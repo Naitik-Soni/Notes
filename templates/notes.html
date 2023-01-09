@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'notes.css' %}">
+    <script src="https://kit.fontawesome.com/09d21e6cd0.js" crossorigin="anonymous"></script>
+    <title>My notes</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Notify</h1>
+    </nav>
+
+    <section class="container">
+        <div class="addnewnote" onclick="shownotes()">
+            +
+        </div>
+
+        {% for x in mynotes %}
+        <div class="note" id="{{ x.id }}" onclick="showmynote('{{ x.id }}')">
+            <h3 id="{{ x.id }}headers">{{ x.title }}</h3>
+            <hr>
+            <p id="{{ x.id }}paragraph" class="para">{{ x.notecontent }}</p>
+        </div>
+        {% endfor %}
+
+        <div class="newnotecontainer" id="form">
+            <form action="addnotes/" method="post" class="noteform">
+                {% csrf_token %}
+                <a href="" id="abc"><i class="fa-solid fa-trash"></i></a>
+                <input type="text" name="title" id="title" class="title" placeholder="Title" required><br>
+                <textarea name="thisnote" id="inputnote" required
+                    placeholder="Start typing your notes here..."></textarea><br>
+                <button type="button" onclick="closenote()">Cancel</button>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </section>
+
+    <script src="{% static 'notes.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 223, 181);
+}
+nav{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    vertical-align: middle;
+    box-shadow: 0 0 7px black;
+    position: fixed;
+    top: 0;
+}
+nav h1{
+    color: rgb(139, 89, 24);
+    font-family: cursive;
+    font-size: 50px;
+}
+.container{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+.container .note, .container  .addnewnote{
+    width: 45%;
+    height: 160px;
+    background-color: white;
+    border-radius: 7px;
+    margin: 2.5%;
+    box-shadow: 0 0 1px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.container .addnewnote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.container .note h3{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.container .note p{
+    margin: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.container .newnotecontainer{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0px;
+    overflow: hidden;
+    display: none;
+    position: fixed;
+}
+
+.container .newnotecontainer .noteform{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+form{
+    padding: 20px 10%;
+}
+
+form input[type='text']{
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid rgb(139, 89, 24);
+}
+
+form textarea{
+    width: 80%;
+    height: calc(100% - 200px);
+    padding: 5px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+form input[type="submit"], form button{
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: rgb(139, 89, 24);
+    border-radius: 5px;
+    color: rgba(255, 223, 181);
+    float: left;
+}
+
+.noteform a{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    display: none;
+}
+
+.noteform a i{
+    color: rgb(139, 89, 24);
+    font-size: 18px;
+}
+
+@media (min-width: 1080px){
+    .container .addnewnote, .container .note{
+        width: 15%;
+        height: same-as-width;
+        margin: 9px 9px;
+    }
+    .container .newnotecontainer .noteform{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 70%;
+        padding: 30px 8%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    #title, #inputnote{
+        width: 100%;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 1080px){
+    .container .addnewnote, .container .note{
+        width: 23%;
+        height: same-as-width;
+        margin: 10px 1%;
+    }
+    .container .newnotecontainer .noteform{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 70%;
+        padding: 30px 8%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    #title, #inputnote{
+        width: 100%;
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(139, 89, 24);
+  }
+  
