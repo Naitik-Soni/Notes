@@ -3,13 +3,10 @@
 A simple notes taking responsive web application with django
 
 ---
-<br>
  Users can
  - Add new notes
  - View/Edit notes
  - Delete notes
-
-
 
 ## Screenshots
 
