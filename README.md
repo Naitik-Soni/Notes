@@ -1,5 +1,4 @@
-
-# <div slign="center> Notes Project </div>
+<div align="center">Notes App<div>
 
 A simple notes taking responsive web application with django
 
@@ -14,4 +13,4 @@ A simple notes taking responsive web application with django
 
 ## Screenshots
 
-![App Screenshot]([https://github.com/Naitik-Soni/Notes/blob/main/App%20screnn%20shot.png?raw=true))
+![App Screenshot](https://github.com/Naitik-Soni/Notes/blob/main/App%20screnn%20shot.png)
