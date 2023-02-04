@@ -14,5 +14,5 @@ A simple notes taking responsive web application with django
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/Naitik-Soni/Notes/blob/main/App%20screnn%20shot.png))
 
