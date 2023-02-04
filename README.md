@@ -1,4 +1,4 @@
-<div align="center">Notes App<div>
+# <div align="center">Notes App<div>
 
 A simple notes taking responsive web application with django
 
